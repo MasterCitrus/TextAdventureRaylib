@@ -3,5 +3,10 @@
 
 class Item : public GameObject
 {
-};
+public:
+	Item();
+	~Item();
 
+	void Pickup();
+	void Use();
+};
