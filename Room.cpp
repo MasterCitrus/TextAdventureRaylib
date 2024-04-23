@@ -26,7 +26,12 @@ void Room::RemoveObject(GameObject* object)
 	
 }
 
-void Room::ConnectRooms(Room* room1, Room* room2, const std::string& exit)
+void Room::ConnectRooms(Room* room, const std::string& exit)
 {
+	connectedRooms.insert(std::pair<std::string, Room*>(exit, room));
+}
 
+Room* Room::GetConnectedRoom(std::string exit)
+{
+	return connectedRooms[exit];
 }

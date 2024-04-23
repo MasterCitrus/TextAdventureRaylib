@@ -18,7 +18,9 @@ public:
 	void AddObject(GameObject* object);
 	void RemoveObject(GameObject* object);
 
-	void ConnectRooms(Room* room1, Room* room2, const std::string& exit);
+	void ConnectRooms(Room* room, const std::string& exit);
+
+	Room* GetConnectedRoom(std::string exit);
 
 private:
 	std::string name;

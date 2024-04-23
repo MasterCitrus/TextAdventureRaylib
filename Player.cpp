@@ -6,12 +6,22 @@ Player::Player() {}
 
 Player::~Player() {}
 
+void Player::SetLocation(Location* location)
+{
+	currentLocation = location;
+}
+
+void Player::SetRoom(Room* room)
+{
+	currentRoom = room;
+}
+
 Location* Player::GetLocation()
 {
-	return nullptr;
+	return currentLocation;
 }
 
 Room* Player::GetRoom()
 {
-	return nullptr;
+	return currentRoom;
 }

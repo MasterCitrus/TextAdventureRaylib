@@ -16,7 +16,7 @@ std::string Location::GetDescription() const
 	return description;
 }
 
-void AddRoom(Room* room)
+void Location::AddRoom(Room* room)
 {
-
+	rooms.push_back(room);
 }

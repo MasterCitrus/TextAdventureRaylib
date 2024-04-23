@@ -1,7 +1,10 @@
 #pragma once
+#include "Player.h"
 
 #include <chrono>
 #include <string>
+
+class Player;
 
 class CommandHandler
 {
@@ -10,7 +13,7 @@ public:
 	~CommandHandler();
 
 	//Handle User Input
-	void UpdateInput();
+	void UpdateInput(Player* _player);
 	std::string GetInput() const;
 
 	bool GetInputActive();

@@ -7,7 +7,7 @@ CommandHandler::CommandHandler() {}
 
 CommandHandler::~CommandHandler() {}
 
-void CommandHandler::UpdateInput()
+void CommandHandler::UpdateInput(Player* _player)
 {
 	char key = GetCharPressed();
 
@@ -58,6 +58,18 @@ void CommandHandler::UpdateInput()
 				inputActive = false;
 				input.clear();
 			}
+			else if (ToLower(input) == "move north")
+			{
+				inputActive = false;
+				input.clear();
+				_player->SetRoom(_player->GetRoom()->GetConnectedRoom("north"));
+			}
+			else if (ToLower(input) == "move south")
+			{
+				inputActive = false;
+				input.clear();
+				_player->SetRoom(_player->GetRoom()->GetConnectedRoom("south"));
+			}
 			else input.clear();
 		}
 		else if (inputActive == false) inputActive = true;
@@ -76,5 +88,5 @@ bool CommandHandler::GetInputActive()
 
 void CommandHandler::Quit()
 {
-	!WindowShouldClose();
+	WindowShouldClose();
 }

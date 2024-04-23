@@ -11,11 +11,13 @@ public:
 	//Player(params);
 	~Player();
 
+	void SetLocation(Location* location);
+	void SetRoom(Room* room);
 	Location* GetLocation();
 	Room* GetRoom();
 private:
-	//Location* currentLocation;
-	//Room* currentRoom;
+	Location* currentLocation;
+	Room* currentRoom;
 	//std::vector<Item> inventory;
 };
 
