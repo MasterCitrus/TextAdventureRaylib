@@ -8,7 +8,7 @@ int main()
 	//std::cout << "Screen Size set\n";
 	const int screenWidth = 800;
 	const int screenHeight = 450;
-
+	SetConfigFlags(FLAG_WINDOW_RESIZABLE);
 	//std::cout << "Make window\n";
 	InitWindow(screenWidth, screenHeight, "Untitled Text Adventure");
 
